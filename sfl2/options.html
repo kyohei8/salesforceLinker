@@ -1,0 +1,119 @@
+﻿<html>
+	<head>
+		<title>Options</title>
+		<meta http-equiv="Content-Type"content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.0.0.min.css">
+		<style type="text/css" media="screen">
+			body {
+				margin-top:0;
+				background: #dff1df;
+			}
+			
+			h5{
+				margin-left: 27px;
+				border-bottom: 1px #DDD solid;
+			}
+			
+			/*******************
+			 * topbar
+			 *******************/
+			.btn{
+				margin-top: 5px;
+			}
+			
+			.topbar1 {
+				background-color: #62BC62;
+				background-image: -webkit-linear-gradient(#97d397, #62bc62);
+				height: 40px;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 10000;
+				overflow: visible;
+			}
+			
+			.topcontainer{
+				width: 700px;
+				margin: 0 auto;
+			}
+			div.container {
+				padding-top: 30px;
+				margin-top: 20px;
+				width: 700px;
+			}
+			
+			span#status{
+				color: #EEE;
+				position:fixed;
+				margin-top: 10px;
+			}
+
+			/*******************
+			 * footer
+			 *******************/			
+			div#footer{
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			
+			/*******************
+			 * mainitem
+			 *******************/
+			div.optionmenu {
+				background: #ffffff;
+				border: 3px solid #bbe2bb;
+				border-radius: 20px;
+				padding: 30px;
+			}
+			
+			table.visible-opt-table td{
+				padding: 3px 10px;
+				border-bottom: 0px solid #DDD;
+			}
+			
+			span.visible-opt-name{
+				color: #404040;
+			}
+			
+			div.sectionheader{
+				margin-top: 5px;
+				margin-bottom: 10px;
+				cursor:pointer;
+			}
+			
+			div.item{
+				margin-left:25px;
+			}
+			img.img{
+				margin-top: 6px;
+				
+			}
+			a.checklink{
+				color: gray;
+			}
+			
+		</style>
+		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+		<script type="text/javascript" src="js/option.js"></script>
+	</head>
+	<body onload="restore_options()">
+		<div class="topbar1">
+			<div class="topcontainer">
+				<button class="btn" style="margin-left: 25px;" onclick="save_options()">Save</button>
+				<button class="btn" onclick="save_options(); top.name='CLOSE_WINDOW';wid=window.open('','CLOSE_WINDOW');top.close();">Save & Close</button>
+				<span id="status"></span>
+				<a href="#" onclick="checkall(true);" style="margin-left: 250px;" class="checklink">すべてチェック</a> / <a href="#" onclick="checkall(false);" class="checklink">すべてのチェックをはずす</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="optionmenu">
+				<h1>Salesforce Linker Options</h1>
+				<h4>リンク表示設定<small><a href="#" style="margin-left: 350px;" onclick="expandAll();">すべて展開</a> / <a href="#" onclick="collapseAll();">すべて折りたたむ</a></small></h4>
+				<div id="visible-opt-table" class="visible-opt-table"></div>
+			</div>
+			<div id="footer">c2011 Uhuru inc.</div>
+		</div>
+	</body>
+</html>
