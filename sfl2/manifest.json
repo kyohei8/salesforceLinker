@@ -1,6 +1,6 @@
 {
   "name": "SalesforceSetupLinker",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Salesforceの各種リンクを生成",
   "update_url": "https://raw.github.com/kyohei8/salesforceLinker/master/update.xml",
   "icons": {
