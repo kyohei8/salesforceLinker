@@ -1,6 +1,6 @@
 var jsonURL = "OptionItems.json";
 //保存
-function save_options() {
+function save_options(isClose) {
 	$.getJSON(jsonURL,function(json) {
 		for (var i in json) {
 			for (var j in json[i].data) {
@@ -11,10 +11,16 @@ function save_options() {
 	
 	// Update status to let user know options were saved.
 	var status = document.getElementById("status");
-	status.innerHTML = "Options Saved.";
-	setTimeout(function() {
-		status.innerHTML = "";
-	}, 750);
+		var time = isClose? 0 : 750;
+    status.innerHTML = "Options Saved.";
+    setTimeout(function(){
+        status.innerHTML = "";
+        if (isClose) {
+            top.name = 'CLOSE_WINDOW';
+            wid = window.open('', 'CLOSE_WINDOW');
+            top.close();
+        }
+    }, time);
 }
 
 // 復元

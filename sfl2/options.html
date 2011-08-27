@@ -101,8 +101,8 @@
 	<body onload="restore_options()">
 		<div class="topbar1">
 			<div class="topcontainer">
-				<button class="btn" style="margin-left: 25px;" onclick="save_options()">Save</button>
-				<button class="btn" onclick="save_options(); top.name='CLOSE_WINDOW';wid=window.open('','CLOSE_WINDOW');top.close();">Save & Close</button>
+				<button class="btn" style="margin-left: 25px;" onclick="save_options(false)">Save</button>
+				<button class="btn" onclick="save_options(true); ">Save & Close</button>
 				<span id="status"></span>
 				<a href="#" onclick="checkall(true);" style="margin-left: 250px;" class="checklink">すべてチェック</a> / <a href="#" onclick="checkall(false);" class="checklink">すべてのチェックをはずす</a>
 			</div>
