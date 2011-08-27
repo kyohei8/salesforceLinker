@@ -2,7 +2,7 @@
   "name": "SalesforceSetupLinker",
   "version": "1.0",
   "description": "Salesforceの各種リンクを生成",
-  "update_url": "http://dl.dropbox.com/u/25442177/update.xml",
+  "update_url": "https://github.com/kyohei8/salesforceLinker/blob/master/update.xml",
   "icons": {
     "128": "./image/config2.png"
   },
