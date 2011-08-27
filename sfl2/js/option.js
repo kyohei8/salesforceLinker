@@ -11,7 +11,7 @@ function save_options(isClose) {
 	
 	// Update status to let user know options were saved.
 	var status = document.getElementById("status");
-		var time = isClose? 0 : 750;
+		var time = isClose? 550 : 750;
     status.innerHTML = "Options Saved.";
     setTimeout(function(){
         status.innerHTML = "";
