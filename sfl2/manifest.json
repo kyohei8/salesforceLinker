@@ -1,0 +1,18 @@
+{
+  "name": "SalesforceSetupLinker",
+  "version": "1.0",
+  "description": "Salesforceの各種リンクを生成",
+  "update_url": "http://dl.dropbox.com/u/25442177/update.xml",
+  "icons": {
+    "16": "./image/config.png",
+    "128": "./image/config2.png"
+  },
+  "browser_action": {
+    "default_icon": "./image/config.png",
+    "popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "tabs"
+  ]
+}
