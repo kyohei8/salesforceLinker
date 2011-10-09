@@ -6,12 +6,13 @@
 CSSはBootstrap, from Twitterを使用しています<br />
 http://twitter.github.com/bootstrap/index.html
 <br />
-インストール
+インストール方法
 -----------
-* 以下のリンクをChromeで開き"続行"を選択します
+* 以下のリンクをGoogle Chromeで開き"続行"を選択します
 
-https://github.com/downloads/kyohei8/salesforceLinker/sfl2_v1.1.crx
+https://github.com/downloads/kyohei8/salesforceLinker/sfl2_v1.2.crx
 
+<br />
 更新履歴
 ----------
 v1.2<br />
