@@ -1,7 +1,9 @@
 [
   {
     "categoryId":"general",
-		"categoryName":"全般",
+    "categoryName":"全般",
+    "bgcolor" : "#ab20a1",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"Home",
        "id"      :"optHome",
@@ -29,8 +31,10 @@
     ]
   },
   {
-		"categoryId":"sobject",
+    "categoryId":"sobject",
     "categoryName":"標準オブジェクトデータ",
+    "bgcolor" : "#5e20ab",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"取引先",
        "id"      :"account",
@@ -81,6 +85,8 @@
   {
     "categoryId":"mypersonalinformation",
     "categoryName":"私の個人情報",
+    "bgcolor" : "#2061ab",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"私のプロファイル",
        "id"      :"myprofile",
@@ -111,6 +117,8 @@
   {
     "categoryId":"email",
     "categoryName":"メール",
+    "bgcolor" : "#2072ab",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"私のメール設定",
        "id"      :"myemailsettings",
@@ -129,6 +137,8 @@
   {
     "categoryId":"import",
     "categoryName":"デスクトップ統合",
+    "bgcolor" : "#2096ab",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"更新の確認",
        "id"      :"checkforupdates",
@@ -151,6 +161,8 @@
   {
     "categoryId":"desktopintegration",
     "categoryName":"私の Chatter 設定",
+    "bgcolor" : "#20ab9a",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"私のフィード",
        "id"      :"myfeeds",
@@ -165,6 +177,8 @@
   {
     "categoryId":"customize",
     "categoryName":"カスタマイズ",
+    "bgcolor" : "#595959",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"タブと表示ラベルの名称変更",
@@ -209,6 +223,8 @@
   {
     "categoryId":"activities",
     "categoryName":"活動",
+    "bgcolor" : "#1797C0",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"ToDo の項目",
@@ -294,8 +310,112 @@
   },
 
   {
+    "categoryId":"accounts",
+    "categoryName":"取引先",
+    "bgcolor" : "#236FBD",
+    "color" : "#FFF",
+    "data" : [
+
+      {"name"    :"項目",
+       "id"      :"accountfields",
+       "linkURL" :"/p/setup/layout/LayoutFieldList?type=Account"},
+
+      {"name"    :"条件",
+       "id"      :"accountrelatedlookupfilters",
+       "linkURL" :"/p/setup/custent/RelatedLookupFiltersListUI/d?tableEnumOrId=Account"},
+
+      {"name"    :"入力規則",
+       "id"      :"accountvalidationrules",
+       "linkURL" :"/p/setup/custent/ValidationFormulaListUI/d?tableEnumOrId=Account"},
+
+      {"name"    :"トリガ",
+       "id"      :"accounttriggers",
+       "linkURL" :"/p/setup/layout/ApexTriggerList?type=Account"},
+
+      {"name"    :"パートナーの役割",
+       "id"      :"partnerroles",
+       "linkURL" :"/setup/ui/picklist_masterdetail.jsp?tid=00I&pt=17"},
+
+      {"name"    :"取引先責任者の役割",
+       "id"      :"accountcontactroles",
+       "linkURL" :"/setup/ui/picklist_masterdetail.jsp?tid=02Z&pt=38"},
+
+      {"name"    :"ページレイアウト",
+       "id"      :"accountpagelayouts",
+       "linkURL" :"/ui/setup/layout/PageLayouts?type=Account"},
+
+      {"name"    :"項目セット",
+       "id"      :"accountfieldsets",
+       "linkURL" :"/p/setup/custent/FieldSetListUI/d?tableEnumOrId=Account"},
+
+      {"name"    :"検索レイアウト",
+       "id"      :"accountsearchlayouts",
+       "linkURL" :"/ui/setup/layout/ListLayouts?type=Account"},
+
+      {"name"    :"ボタンとリンク",
+       "id"      :"accountbuttonsandlinks",
+       "linkURL" :"/p/setup/link/CustomResourceLinkList?pageName=Account&type=Account"},
+
+      {"name"    :"レコードタイプ",
+       "id"      :"accountrecordtypes",
+       "linkURL" :"/ui/setup/rectype/RecordTypes?type=Account"},
+
+      {"name"    :"取引先チーム",
+       "id"      :"accountteams",
+       "linkURL" :"/opp/teamsellingsetup.jsp?type=Account"}
+    ]
+  },
+
+  {
+    "categoryId":"contacts",
+    "categoryName":"取引先責任者",
+    "bgcolor" : "#56458C",
+    "color" : "#FFF",
+    "data" : [
+
+      {"name"    :"項目",
+       "id"      :"contactfields",
+       "linkURL" :"/p/setup/layout/LayoutFieldList?type=Contact"},
+
+      {"name"    :"条件",
+       "id"      :"contactrelatedlookupfilters",
+       "linkURL" :"/p/setup/custent/RelatedLookupFiltersListUI/d?tableEnumOrId=Contact"},
+
+      {"name"    :"入力規則",
+       "id"      :"contactvalidationrules",
+       "linkURL" :"/p/setup/custent/ValidationFormulaListUI/d?tableEnumOrId=Contact"},
+
+      {"name"    :"トリガ",
+       "id"      :"contacttriggers",
+       "linkURL" :"/p/setup/layout/ApexTriggerList?type=Contact"},
+
+      {"name"    :"ページレイアウト",
+       "id"      :"contactpagelayouts",
+       "linkURL" :"/ui/setup/layout/PageLayouts?type=Contact"},
+
+      {"name"    :"項目セット",
+       "id"      :"contactfieldsets",
+       "linkURL" :"/p/setup/custent/FieldSetListUI/d?tableEnumOrId=Contact"},
+
+      {"name"    :"検索レイアウト",
+       "id"      :"contactsearchlayouts",
+       "linkURL" :"/ui/setup/layout/ListLayouts?type=Contact"},
+
+      {"name"    :"ボタンとリンク",
+       "id"      :"contactbuttonsandlinks",
+       "linkURL" :"/p/setup/link/CustomResourceLinkList?pageName=Contact&type=Contact"},
+
+      {"name"    :"レコードタイプ",
+       "id"      :"contactrecordtypes",
+       "linkURL" :"/ui/setup/rectype/RecordTypes?type=Contact"}
+    ]
+  },
+
+  {
     "categoryId":"campaigns",
     "categoryName":"キャンペーン",
+    "bgcolor" : "#C93",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -363,10 +483,12 @@
        "linkURL" :"/ui/setup/rectype/RecordTypes?type=CampaignMember"}
     ]
   },
-
+  
   {
     "categoryId":"leads",
     "categoryName":"リード",
+    "bgcolor" : "#E39321",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -423,107 +545,12 @@
     ]
   },
 
-  {
-    "categoryId":"accounts",
-    "categoryName":"取引先",
-    "data" : [
-
-      {"name"    :"項目",
-       "id"      :"accountfields",
-       "linkURL" :"/p/setup/layout/LayoutFieldList?type=Account"},
-
-      {"name"    :"条件",
-       "id"      :"accountrelatedlookupfilters",
-       "linkURL" :"/p/setup/custent/RelatedLookupFiltersListUI/d?tableEnumOrId=Account"},
-
-      {"name"    :"入力規則",
-       "id"      :"accountvalidationrules",
-       "linkURL" :"/p/setup/custent/ValidationFormulaListUI/d?tableEnumOrId=Account"},
-
-      {"name"    :"トリガ",
-       "id"      :"accounttriggers",
-       "linkURL" :"/p/setup/layout/ApexTriggerList?type=Account"},
-
-      {"name"    :"パートナーの役割",
-       "id"      :"partnerroles",
-       "linkURL" :"/setup/ui/picklist_masterdetail.jsp?tid=00I&pt=17"},
-
-      {"name"    :"取引先責任者の役割",
-       "id"      :"accountcontactroles",
-       "linkURL" :"/setup/ui/picklist_masterdetail.jsp?tid=02Z&pt=38"},
-
-      {"name"    :"ページレイアウト",
-       "id"      :"accountpagelayouts",
-       "linkURL" :"/ui/setup/layout/PageLayouts?type=Account"},
-
-      {"name"    :"項目セット",
-       "id"      :"accountfieldsets",
-       "linkURL" :"/p/setup/custent/FieldSetListUI/d?tableEnumOrId=Account"},
-
-      {"name"    :"検索レイアウト",
-       "id"      :"accountsearchlayouts",
-       "linkURL" :"/ui/setup/layout/ListLayouts?type=Account"},
-
-      {"name"    :"ボタンとリンク",
-       "id"      :"accountbuttonsandlinks",
-       "linkURL" :"/p/setup/link/CustomResourceLinkList?pageName=Account&type=Account"},
-
-      {"name"    :"レコードタイプ",
-       "id"      :"accountrecordtypes",
-       "linkURL" :"/ui/setup/rectype/RecordTypes?type=Account"},
-
-      {"name"    :"取引先チーム",
-       "id"      :"accountteams",
-       "linkURL" :"/opp/teamsellingsetup.jsp?type=Account"}
-    ]
-  },
-
-  {
-    "categoryId":"contacts",
-    "categoryName":"取引先責任者",
-    "data" : [
-
-      {"name"    :"項目",
-       "id"      :"contactfields",
-       "linkURL" :"/p/setup/layout/LayoutFieldList?type=Contact"},
-
-      {"name"    :"条件",
-       "id"      :"contactrelatedlookupfilters",
-       "linkURL" :"/p/setup/custent/RelatedLookupFiltersListUI/d?tableEnumOrId=Contact"},
-
-      {"name"    :"入力規則",
-       "id"      :"contactvalidationrules",
-       "linkURL" :"/p/setup/custent/ValidationFormulaListUI/d?tableEnumOrId=Contact"},
-
-      {"name"    :"トリガ",
-       "id"      :"contacttriggers",
-       "linkURL" :"/p/setup/layout/ApexTriggerList?type=Contact"},
-
-      {"name"    :"ページレイアウト",
-       "id"      :"contactpagelayouts",
-       "linkURL" :"/ui/setup/layout/PageLayouts?type=Contact"},
-
-      {"name"    :"項目セット",
-       "id"      :"contactfieldsets",
-       "linkURL" :"/p/setup/custent/FieldSetListUI/d?tableEnumOrId=Contact"},
-
-      {"name"    :"検索レイアウト",
-       "id"      :"contactsearchlayouts",
-       "linkURL" :"/ui/setup/layout/ListLayouts?type=Contact"},
-
-      {"name"    :"ボタンとリンク",
-       "id"      :"contactbuttonsandlinks",
-       "linkURL" :"/p/setup/link/CustomResourceLinkList?pageName=Contact&type=Contact"},
-
-      {"name"    :"レコードタイプ",
-       "id"      :"contactrecordtypes",
-       "linkURL" :"/ui/setup/rectype/RecordTypes?type=Contact"}
-    ]
-  },
 
   {
     "categoryId":"opportunities",
     "categoryName":"商談",
+    "bgcolor" : "#E5C130",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -623,17 +650,66 @@
   {
     "categoryId":"quotes",
     "categoryName":"見積",
+    "bgcolor" : "#ac7215",
+    "color" : "#FFF",
     "data" : [
 
+      {"name"    :"項目",
+       "id"      :"quotefields",
+       "linkURL" :"/p/setup/layout/LayoutFieldList?type=Quote"},
+
+      {"name"    :"条件",
+       "id"      :"quoterelatedlookupfilters",
+       "linkURL" :"/p/setup/custent/RelatedLookupFiltersListUI/d?tableEnumOrId=Quote"},
+
+      {"name"    :"入力規則",
+       "id"      :"QuoteValidationFormulaListUI",
+       "linkURL" :"/p/setup/custent/ValidationFormulaListUI/d?tableEnumOrId=Quote"},
+
+      {"name"    :"トリガ",
+       "id"      :"QuoteApexTriggerList",
+       "linkURL" :"/p/setup/layout/ApexTriggerList?type=Quote"},
+
+      {"name"    :"ページレイアウト",
+       "id"      :"QuotePageLayouts",
+       "linkURL" :"/ui/setup/layout/PageLayouts?type=Quote"},
+
+      {"name"    :"項目セット",
+       "id"      :"QuoteFieldSetListUI",
+       "linkURL" :"/p/setup/custent/FieldSetListUI/d?tableEnumOrId=Quote"},
+
+      {"name"    :"検索レイアウト",
+       "id"      :"QuoteListLayouts",
+       "linkURL" :"/ui/setup/layout/ListLayouts?type=Quote"},
+
+      {"name"    :"ボタンとリンク",
+       "id"      :"QuoteCustomResourceLinkList",
+       "linkURL" :"/p/setup/link/CustomResourceLinkList?pageName=Quote&type=Quote"},
+
+      {"name"    :"レコードタイプ",
+       "id"      :"QuoteRecordTypes",
+       "linkURL" :"/ui/setup/rectype/RecordTypes?type=Quote"},
+
+      {"name"    :"テンプレート",
+       "id"      :"QuoteTemplateLayouts",
+       "linkURL" :"/ui/quote/QuoteTemplateLayouts"},
+
       {"name"    :"設定",
-       "id"      :"quotesettings",
-       "linkURL" :"/quote/quoteSettings.apexp"}
+       "id"      :"quoteSettings",
+       "linkURL" :"/quote/quoteSettings.apexp"},
+
+      {"name"    :"見積品目名",
+       "id"      :"quoteLineItem",
+       "linkURL" :"/ui/setup/Setup?setupid=QuoteLineItem"}
+
     ]
   },
 
   {
     "categoryId":"forecasts",
     "categoryName":"売上予測",
+    "bgcolor" : "#ab9920",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"設定",
@@ -649,6 +725,8 @@
   {
     "categoryId":"cases",
     "categoryName":"ケース",
+    "bgcolor" : "#B7A752",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -732,6 +810,8 @@
   {
     "categoryId":"selfservice",
     "categoryName":"セルフサービス",
+    "bgcolor" : "#2093ab",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"公開ソリューション",
        "id"      :"publicsolutions",
@@ -758,6 +838,8 @@
   {
     "categoryId":"callcenter",
     "categoryName":"コールセンター",
+    "bgcolor" : "#206dab",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"コールセンター",
@@ -777,6 +859,8 @@
   {
     "categoryId":"contract",
     "categoryName":"契約",
+    "bgcolor" : "#66895F",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -824,6 +908,8 @@
   {
     "categoryId":"solutions",
     "categoryName":"ソリューション",
+    "bgcolor" : "#608B06",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -875,6 +961,8 @@
   {
     "categoryId":"products",
     "categoryName":"商品",
+    "bgcolor" : "#317992",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -922,6 +1010,8 @@
   {
     "categoryId":"partners",
     "categoryName":"パートナー",
+    "bgcolor" : "#316192",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"設定",
        "id"      :"partnerportalsettings",
@@ -932,6 +1022,8 @@
   {
     "categoryId":"s2s",
     "categoryName":"Salesforce to Salesforce",
+    "bgcolor" : "#313e92",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"設定",
        "id"      :"s2ssettings",
@@ -942,6 +1034,8 @@
   {
     "categoryId":"customerportal",
     "categoryName":"カスタマーポータル",
+    "bgcolor" : "#4b3192",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"カスタマーポータル設定",
@@ -953,6 +1047,8 @@
   {
     "categoryId":"ideas",
     "categoryName":"アイデア",
+    "bgcolor" : "#178AFF",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -996,6 +1092,8 @@
   {
     "categoryId":"answers",
     "categoryName":"アンサー",
+    "bgcolor" : "#36A0FE",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"設定",
@@ -1007,6 +1105,8 @@
   {
     "categoryId":"assets",
     "categoryName":"納入商品",
+    "bgcolor" : "#317992",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -1046,6 +1146,8 @@
   {
     "categoryId":"users",
     "categoryName":"ユーザ",
+    "bgcolor" : "#715051",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"項目",
@@ -1085,6 +1187,8 @@
   {
     "categoryId":"tags",
     "categoryName":"タグ",
+    "bgcolor" : "#71506b",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"タグ設定",
@@ -1100,6 +1204,8 @@
   {
     "categoryId":"reportsdashboards",
     "categoryName":"レポート & ダッシュボード",
+    "bgcolor" : "#A55647",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"ユーザインターフェース設定",
@@ -1119,6 +1225,8 @@
   {
     "categoryId":"search",
     "categoryName":"検索",
+    "bgcolor" : "#6e6454",
+    "color" : "#FFF",
     "data" : [
       
       {"name"    :"検索設定",
@@ -1134,6 +1242,8 @@
   {
     "categoryId":"chatter",
     "categoryName":"Chatter",
+    "bgcolor" : "#636e54",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"設定",
@@ -1157,6 +1267,8 @@
   {
     "categoryId":"create",
     "categoryName":"作成",
+    "bgcolor" : "#87603d",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"アプリケーション",
@@ -1188,6 +1300,8 @@
   {
     "categoryId":"workflowapprovals",
     "categoryName":"ワークフローと承認申請",
+    "bgcolor" : "#87583d",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"ワークフロールール",
@@ -1227,6 +1341,8 @@
   {
     "categoryId":"develop",
     "categoryName":"開発",
+    "bgcolor" : "#222",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"Apex クラス",
@@ -1286,18 +1402,20 @@
   {
     "categoryId":"deploy",
     "categoryName":"リリース",
+    "bgcolor" : "#444",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"リリース接続",
-       "id"      :"",
+       "id"      :"listDeployConnection",
        "linkURL" :"/changemgmt/listDeployConnection.apexp"},
 
       {"name"    :"送信変更セット",
-       "id"      :"",
+       "id"      :"listOutboundChangeSet",
        "linkURL" :"/changemgmt/listOutboundChangeSet.apexp"},
 
       {"name"    :"受信変更セット",
-       "id"      :"",
+       "id"      :"listInboundChangeSet",
        "linkURL" :"/changemgmt/listInboundChangeSet.apexp"},
 
       {"name"    :"リリースの監視",
@@ -1309,6 +1427,8 @@
   {
     "categoryId":"othersetting",
     "categoryName":"その他設定",
+    "bgcolor" : "#666",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"インストール済みパッケージの参照",
        "id"      :"installedpackages",
@@ -1327,10 +1447,12 @@
   {
     "categoryId":"manageusers",
     "categoryName":"ユーザの管理",
+    "bgcolor" : "#0e6e32",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"ユーザ",
-       "id"      :"users",
+       "id"      :"users2",
        "linkURL" :"/005"},
 
       {"name"    :"ロール",
@@ -1358,6 +1480,8 @@
   {
     "categoryId":"companyprofile",
     "categoryName":"組織プロファイル",
+    "bgcolor" : "#456e0e",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"営業時間",
@@ -1377,6 +1501,8 @@
   {
     "categoryId":"securitycontrols",
     "categoryName":"セキュリティのコントロール",
+    "bgcolor" : "#6e6c0e",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"共有設定",
@@ -1436,6 +1562,8 @@
   {
     "categoryId":"communicationtemplates",
     "categoryName":"コミュニケーションテンプレート",
+    "bgcolor" : "#6e4d0e",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"レターヘッド",
@@ -1455,6 +1583,8 @@
   {
     "categoryId":"translationworkbench",
     "categoryName":"トランスレーションワークベンチ",
+    "bgcolor" : "#6e220e",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"翻訳設定",
@@ -1466,11 +1596,11 @@
        "linkURL" :"/i18n/TranslationWorkbench.apexp"},
 
       {"name"    :"エクスポート",
-       "id"      :"export",
+       "id"      :"translateExport",
        "linkURL" :"/i18n/TranslationExport.apexp"},
 
       {"name"    :"インポート",
-       "id"      :"import",
+       "id"      :"translateImport",
        "linkURL" :"/i18n/TranslationImport.apexp"}
     ]
   },
@@ -1478,13 +1608,15 @@
   {
     "categoryId":"datamanagement",
     "categoryName":"データの管理",
+    "bgcolor" : "#6e0e27",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"分析スナップショット",
        "id"      :"analyticsnapshots",
        "linkURL" :"/0A0"},
 
       {"name"    :"法人取引先、取引先責任者のインポート",
-       "id"      :"importaccounts/contacts",
+       "id"      :"importaccountsContacts",
        "linkURL" :"/setup/imp/orgimport_welcome.jsp"},
 
       {"name"    :"リードのインポート",
@@ -1528,6 +1660,8 @@
   {
     "categoryId":"monitoring",
     "categoryName":"監視",
+    "bgcolor" : "#6E0E45",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"インポート",
@@ -1575,6 +1709,8 @@
   {
     "categoryId":"mobileadministration",
     "categoryName":"モバイル管理",
+    "bgcolor" : "#6E0E66",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"Salesforce Mobile 構成",
@@ -1606,6 +1742,8 @@
   {
     "categoryId":"desktopadministration",
     "categoryName":"デスクトップ管理者",
+    "bgcolor" : "#4d0e6e",
+    "color" : "#FFF",
     "data" : [
 
       {"name"    :"Outlook 設定",
@@ -1626,6 +1764,8 @@
   {
     "categoryId":"emailadministration",
     "categoryName":"メール管理",
+    "bgcolor" : "#290E6E",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"送信",
        "id"      :"deliverability",
@@ -1660,6 +1800,8 @@
   {
     "categoryId":"googleapps",
     "categoryName":"Google Apps",
+    "bgcolor" : "#0E1D6E",
+    "color" : "#FFF",
     "data" : [
       {"name"    :"設定",
        "id"      :"googleappssettings",

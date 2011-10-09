@@ -2,34 +2,20 @@
 	<head>
 		<title>Options</title>
 		<meta http-equiv="Content-Type"content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.0.0.min.css">
 		<style type="text/css" media="screen">
 			body {
 				margin-top:0;
 				background: #dff1df;
 			}
 			
-			label{
-				float:none;
-				text-align:left;
-				padding:0;
-				line-height: 1;
-			}
-			span.label{
-				cursor:pointer;
-			}
 			
-			h1{
-				margin-bottom: 0px;
-			}
 			
 			/*******************
 			 * topbar
 			 *******************/
 			.btn{
 				margin-top: 5px;
-				/*margin-left: 25px;*/
-				width:80px;
 			}
 			
 			.topbar1 {
@@ -40,13 +26,18 @@
 				top: 0;
 				left: 0;
 				right: 0;
-				z-index: 0;
+				z-index: 10000;
 				overflow: visible;
 			}
 			
 			.topcontainer{
-				width: 855px;
+				width: 700px;
 				margin: 0 auto;
+			}
+			div.container {
+				padding-top: 30px;
+				margin-top: 20px;
+				width: 700px;
 			}
 			
 			span#status{
@@ -54,17 +45,11 @@
 				position:fixed;
 				margin-top: 10px;
 			}
-			
-			div.menuicon{
-				float:right;
-				margin-top: 11px;
-			}
-			
+
 			/*******************
 			 * footer
 			 *******************/			
 			div#footer{
-				clear:both;
 				text-align: center;
 				margin-top: 20px;
 				margin-bottom: 20px;
@@ -74,52 +59,20 @@
 				font-size: 10px;
 				color: #999;
 			}
-			
-			/*******************
-			 * container
-			 *******************/
-			div.container {
-				padding-top: 30px;
-				width: 900px;
-				margin: 20px auto 0px;
-			}
-			/*******************
-			 * sidebar
-			 *******************/
-			div.sidebar{
-				width:210px;
-				float:left;
-				position: fixed;
-				border: 3px solid #bbe2bb;
-				background: #ffffff;
-				border-radius: 20px;
-				padding: 0px 15px 15px 15px;
-			}
-			
-			div.sidebar ul {
-				margin: 0;
-			}
-			div.sidebar li {
-				list-style-type: none;
-			}
 			/*******************
 			 * mainitem
 			 *******************/
-			a.dummyAnchor{
-				position: fixed;
-			}
 			div.optionmenu {
-				width:623px;
-				float:right;
 				background: #ffffff;
 				border: 3px solid #bbe2bb;
 				border-radius: 20px;
-				padding: 15px 10px;
+				padding: 30px;
 			}
 			
 			h5{
 				margin-left: 27px;
 				line-height: 25px;
+				/*border-bottom: 1px #DDD solid;*/
 			}
 			
 			div.itembody{
@@ -130,7 +83,8 @@
 			
 			div.itembox{
 				background-color: #FFF;
-				margin: 0px 5px 0px;
+				margin: 5px 10px 0px;
+				margin-bottom: 3px;
 				border-radius: 10px;
 				padding-top:10px;
 				padding-bottom:5px;
@@ -143,49 +97,44 @@
 			
 			span.visible-opt-name{
 				color: #404040;
-				margin-left:5px;
 			}
 			
 			div.sectionheader{
 				margin-top: 5px;
-				padding-top: 2px;
+				/*margin-bottom: 10px;*/
+				padding-top: 5px;
 				padding-left: 5px;
 				cursor:pointer;
 			}
 			
 			div.item{
-				margin-left:15px;
+				margin-left:25px;
 			}
-			
+			img.img{
+				/*margin-top: 6px;*/
+				
+			}
+			a.checklink{
+				color: gray;
+			}
 			
 		</style>
 		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap-twipsy.js"></script>
 		<script type="text/javascript" src="js/option.js"></script>
 	</head>
 	<body onload="restore_options()">
 		<div class="topbar1">
 			<div class="topcontainer">
-				<button class="btn" onclick="save_options(false)">Save</button>
+				<button class="btn" style="margin-left: 25px;" onclick="save_options(false)">Save</button>
+				<button class="btn" onclick="save_options(true); ">Save & Close</button>
 				<span id="status"></span>
-				<div class="menuicon">
-					<a href="#" onclick="checkall(true);"><img id="allcheckon" alt="すべてチェック" src="image/check_alt_16x16.png" /></a>
-					<a href="#" onclick="checkall(false);"><img id="allcheckoff" alt="すべてのチェックをはずす" src="image/x_alt_16x16.png" /></a>
-					<a href="#" onclick="expandAll();" ><img id="expandall" alt="すべて展開" src="image/plus_alt_16x16.png" /></a>
-					<a href="#" onclick="collapseAll();" ><img id="collapseall" alt="すべて折りたたむ" src="image/minus_alt_16x16.png" /></a>
-				</div>
+				<a href="#" onclick="checkall(true);" style="margin-left: 250px;" class="checklink">すべてチェック</a> / <a href="#" onclick="checkall(false);" class="checklink">すべてのチェックをはずす</a>
 			</div>
 		</div>
-		
 		<div class="container">
-			<div class="sidebar">
-				<h3>Category</h3>
-				<div id="sidebarmenu"></div>
-			</div>
-			
 			<div class="optionmenu">
 				<h1>Salesforce Linker Options</h1>
-				<h4>リンク表示設定</h4>
+				<h4>リンク表示設定<small><a href="#" style="margin-left: 350px;" onclick="expandAll();">すべて展開</a> / <a href="#" onclick="collapseAll();">すべて折りたたむ</a></small></h4>
 				<div id="visible-opt-table" class="visible-opt-table"></div>
 			</div>
 			<div id="footer">

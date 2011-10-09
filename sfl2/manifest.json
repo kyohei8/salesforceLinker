@@ -1,6 +1,6 @@
 {
   "name": "SalesforceSetupLinker",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Salesforceの各種リンクを生成",
   "update_url": "http://dl.dropbox.com/u/25442177/update.xml",
   "icons": {
