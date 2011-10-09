@@ -11,8 +11,14 @@ https://github.com/downloads/kyohei8/salesforceLinker/sfl2_v1.1.crx
 
 更新履歴
 ----------
+v1.2<br />
+・サイドバーを追加<br />
+・メニューを一部アイコン化<br />
+・デザインの変更<br />
+・その他バグ修正<br />
+<br />
 v1.1<br />
 ・項目に色をつけて見やすくした<br />
-・見積の項目を修正した。
+・見積の項目を修正した。<br />
 
 
