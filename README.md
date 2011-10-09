@@ -1,8 +1,11 @@
 ## Salesforce Linker (Chrome Extensions) ##
 表示しているSalesforce環境の静的リンクを生成します。<br />
 オプションにより好きなリンクを設定する事ができます。<br />
-設定したデータはchromeのローカルデータベースに保存されます
-
+設定したデータはchromeのローカルデータベースに保存されます<br />
+<br />
+CSSはBootstrap, from Twitterを使用しています<br />
+http://twitter.github.com/bootstrap/index.html<br />
+<br />
 インストール
 -----------
 * 以下のリンクをChromeで開き"続行"を選択します
