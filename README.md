@@ -4,7 +4,7 @@
 設定したデータはchromeのローカルデータベースに保存されます<br />
 <br />
 CSSはBootstrap, from Twitterを使用しています<br />
-http://twitter.github.com/bootstrap/index.html<br />
+http://twitter.github.com/bootstrap/index.html
 <br />
 インストール
 -----------
