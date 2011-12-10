@@ -16,12 +16,12 @@ $(function() {
 			var domain = url.split('/')[2];
 			sfUrl = 'https://' + domain;
 			if(sfUrl.indexOf('force.com') == -1){
-				$('#main').before("not Salesforce!");
+				$('#main').before('not Salesforce!');
 				$('#goidlink').hide();
 				return false;
 			}
 			//load json
-			var jsonURL = "OptionItems.json";
+			var jsonURL = 'OptionItems.json';
 			var isExist;
 			$.getJSON(jsonURL, function(json){
 				for (var i in json) {
@@ -37,16 +37,20 @@ $(function() {
 						}
 					}
 					if(!isExist){
-						$('#main div').remove(":last-child");
+						$('#main div').remove(':last-child');
 					}
 				}				
 			})
 			
-			var checked = localStorage["visibleIdLink"];
-      if (checked === 'checked') {
-        $("#goidlink").show();
+			var checked = localStorage['visibleIdLink'];
+			if(!checked){
+			  $('#goidlink').show();
       }else{
-        $("#goidlink").hide();        
+        if (checked === 'checked') {
+          $('#goidlink').show();
+        }else{
+          $('#goidlink').hide();        
+        }
       }
 			
 		});
@@ -54,7 +58,15 @@ $(function() {
 });
 
 var golink = function(){
-  window.open(sfUrl+'/'+$("#inputId").val(), '_blank');
+  if($('#inputId').val()!==''){
+    window.open(sfUrl+'/'+$('#inputId').val(), '_blank');
+  }
+}
+
+var golinkkey=function(){
+  if(event.keyCode == 13){
+    golink();
+  }
 }
 
 
