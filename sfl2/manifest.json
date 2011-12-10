@@ -1,5 +1,5 @@
 {
-  "name": "SalesforceQuikLinker",
+  "name": "SalesforceQuickLinker",
   "version": "1.3.1",
   "description": "Salesforceの各種リンクを生成",
   "update_url": "http://dl.dropbox.com/u/25442177/update.xml",
