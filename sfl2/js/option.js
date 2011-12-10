@@ -12,6 +12,8 @@ function save_options(isClose) {
 			}
 		}
 	});
+	//visibled id link 
+	localStorage["visibleIdLink"] = $('#visibledIdLink').attr('checked');
 	
 	// Update status to let user know options were saved.
 	var status = document.getElementById("status");
@@ -23,22 +25,34 @@ function save_options(isClose) {
 	
 }
 
+
 // 復元
 function restore_options() {
-	$.getJSON(jsonURL,function(json) {
-		for (var i in json) {
-			for (var j in json[i].data) {
-				var checked = localStorage[json[i].data[j].id];
-				if (!checked) {
-					continue;
-				}
-				if (checked === 'checked') {
-					$('#' + json[i].data[j].id).attr('checked', 'checked');
-				}
-			}
-		}
-	});
+  $.getJSON(jsonURL, function(json) {
+    for(var i in json) {
+      for(var j in json[i].data) {
+        var checked = localStorage[json[i].data[j].id];
+        if(!checked) {
+          continue;
+        }
+        if(checked === 'checked') {
+          $('#' + json[i].data[j].id).attr('checked', 'checked');
+        }
+      }
+    }
+  });
+  //visibled id link
+  var vil = localStorage["visibleIdLink"];
+  //dbにない場合はチェック
+  if(!vil) {
+    $('#visibledIdLink').attr('checked', 'checked');
+  }
+
+  if(vil === 'checked') {
+    $('#visibledIdLink').attr('checked', 'checked');
+  }
 }
+
 
 
 //初期処理

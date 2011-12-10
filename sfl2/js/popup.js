@@ -2,7 +2,8 @@
 var c = chrome;
 var ws = c.windows;
 var tbs = c.tabs;
- 
+var sfUrl;
+
 $(function() {
 	ws.getCurrent(function (window) {
 		tbs.getSelected(window.id, function (tab) {
@@ -13,10 +14,10 @@ $(function() {
 			
 			var url = tab.url;
 			var domain = url.split('/')[2];
-			var sfUrl = 'https://' + domain;
+			sfUrl = 'https://' + domain;
 			if(sfUrl.indexOf('force.com') == -1){
-				//alert('Salesforceぢゃないよ');
 				$('#main').before("not Salesforce!");
+				$('#goidlink').hide();
 				return false;
 			}
 			//load json
@@ -38,13 +39,24 @@ $(function() {
 					if(!isExist){
 						$('#main div').remove(":last-child");
 					}
-				}
-				return;
-			}) 
+				}				
+			})
+			
+			var checked = localStorage["visibleIdLink"];
+      if (checked === 'checked') {
+        $("#goidlink").show();
+      }else{
+        $("#goidlink").hide();        
+      }
 			
 		});
 	});
 });
+
+var golink = function(){
+  window.open(sfUrl+'/'+$("#inputId").val(), '_blank');
+}
+
 
 //create Items
 function createItem(id,name,sfUrl,url){

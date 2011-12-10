@@ -1,32 +1,60 @@
 <!DOCTYPE HTML>
 <html lang="ja-JP">
 <head>
+  <title>sfql</title>
   <meta charset="UTF-8">
 	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
   <script type="text/javascript" src="js/popup.js"></script>
   <style type="text/css">
-		body {
-			min-width:150px;
-			font-size:11px;
-		}
-		div.items{
-			padding: 2px 15px;
-			cursor: pointer;
-			border-radius: 8px;
-		}
-		div.items:hover{
-			background-color: #DFF1DF;
-		}
-		.separator {
-			width: 100%;
-			margin: 5px 0;
-			border-bottom: 1px solid black;
-		}
+    body {
+      min-width: 175px;
+      font-size: 11px;
+    }
+    div.items {
+      padding: 2px 15px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    div.items:hover {
+      background-color: #DFF1DF;
+    }
+    .separator {
+      width: 100%;
+      margin: 5px 0;
+      border-bottom: 1px solid black;
+    }
+    div.goidlink {
+      float: left;
+    }
+    div.goidlink input {
+      margin-bottom: 6px;
+      width: 124px;
+    }
+    div.goidlink span {
+      margin: 10px 0px;
+    }
+    div.goidlink span.golink {
+      cursor: pointer;
+      border: 1px solid #999;
+      border-radius: 8px;
+      padding: 2px 5px;
+      background-color: #EEE;
+    }
+    div.goidlink span.golink:hover {
+      background-color: #DFF1DF;
+    }
+
   </style>
 </head>
 <body>
 	<div id="main"></div>
-	<div id="separatorItem" class="separator" style="display: block; "></div>
-	<div id="optionItem" class="menu items">Options</div>
+  <div id="separatorItem" class="separator" style="display: block; "></div>
+  <div id="goidlink" class="goidlink">
+    <span>Id</span>
+    <input type="text" id="inputId"/>
+    <span class="golink" onclick="golink()">Go</span>
+    <div id="separatorItem" class="separator" style="display: block;clear: both"></div>
+  </div>
+	<div id="optionItem" class="menu items" style="clear: both">Options</div>
 </body>
 </html>
